@@ -141,7 +141,7 @@ const showResults = () => {
 
     let message = "";
 
-    if (totalTypedWords > 60 && accuracy >= 95) {
+    if (totalTypedWords > 50 && accuracy >= 95) {
         message = "🌟 **Typing Wizard!** 🌟 <br> You might just become a typing legend! 🏆";
     } else if (totalTypedWords > 40 && accuracy >= 95) {
         message = "🎉 **Great Job!** 🎉 <br> Keep pushing your limits! 🚀";
