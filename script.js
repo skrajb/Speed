@@ -56,12 +56,7 @@ const updateDisplayTime = () => {
     const seconds = (timeRemaining % 60).toString().padStart(2, "0");
     document.getElementById("time_remaining").textContent = `${minutes}:${seconds}`;
 };
-document.getElementById("timer").addEventListener("change", function() {
-    // Update the timeRemaining variable with the selected value
-    timeRemaining = parseInt(this.value);
-    updateDisplayTime(); // Update the displayed time
-    resetTest(); // Reset the test to apply the new timer
-});
+
 const resetTest = () => {
     clearInterval(timer);
     timer = null;
@@ -132,7 +127,12 @@ const startTimer = () => {
         }, 1000);
     }
 };
-
+document.getElementById("timer").addEventListener("change", function() {
+    // Update the timeRemaining variable with the selected value
+    timeRemaining = parseInt(this.value);
+    updateDisplayTime(); // Update the displayed time
+    resetTest(); // Reset the test to apply the new timer
+});
 const showResults = () => {
     const totalTypedWords = correctWordsTyped + wrongWords;
     const accuracy = totalTypedWords > 0 ? ((correctWordsTyped / totalTypedWords) * 100).toFixed(2) : 0;
