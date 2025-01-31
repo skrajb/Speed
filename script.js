@@ -56,7 +56,12 @@ const updateDisplayTime = () => {
     const seconds = (timeRemaining % 60).toString().padStart(2, "0");
     document.getElementById("time_remaining").textContent = `${minutes}:${seconds}`;
 };
-
+document.getElementById("timer").addEventListener("change", function() {
+    // Update the timeRemaining variable with the selected value
+    timeRemaining = parseInt(this.value);
+    updateDisplayTime(); // Update the displayed time
+    resetTest(); // Reset the test to apply the new timer
+});
 const resetTest = () => {
     clearInterval(timer);
     timer = null;
