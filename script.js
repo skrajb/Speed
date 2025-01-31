@@ -133,6 +133,7 @@ document.getElementById("timer").addEventListener("change", function() {
     updateDisplayTime(); // Update the displayed time
     resetTest(); // Reset the test to apply the new timer
 });
+
 const showResults = () => {
     const totalTypedWords = correctWordsTyped + wrongWords;
     const accuracy = totalTypedWords > 0 ? ((correctWordsTyped / totalTypedWords) * 100).toFixed(2) : 0;
