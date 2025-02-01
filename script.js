@@ -166,7 +166,7 @@ const showResults = () => {
        
 	   <center> <h1 style="color:red;">Result</h1><h2>${message}</h2></center>
       
-	  <table><tr><td>Typing Speed</td><Td>:</td><td>${speed} WPM;
+	  <table><tr>
    <Td><div class="results-item"><span class="total-count">Total Typed Words</td><Td>:</td><td></span> ${totalTypedWords}</div></td>
 <tr><td>        <div class="results-item"><span class="correct-count">Correct Words</td><Td>:</td><td></span> ${correctWordsTyped} (${correctCharactersTyped} Keystrokes)</div></td>
 <tr> <td>       <div class="results-item" style="color:red";><span class="incorrect-count">Incorrect Words</td><Td>:</td><td></span> ${wrongWords} ( ${wrongCharactersTyped} Keystrokes)</div></td>
