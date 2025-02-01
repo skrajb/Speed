@@ -150,7 +150,7 @@ const showResults = () => {
     } else if (totalTypedWords > 30 && accuracy >= 95) {
         message = "👍 Nice Effort! 👍 ";
     } else if (speed < 30 && accuracy >= 95) {
-        message = "🧐 Focus and Improve! <b>Practice makes perfect! 💪";
+        message = "🧐 Focus and Improve! <br>Practice makes perfect! 💪";
     } else {
         message = "🚧 Every expert was once a beginner! 🌱";
     }
