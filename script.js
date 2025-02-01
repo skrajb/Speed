@@ -69,6 +69,7 @@ const resetTest = () => {
     wordsTypedCount = 0; // Reset words typed count
     correctCharactersTyped = 0; // Reset correct characters count
     wrongCharactersTyped = 0; // Reset wrong characters count
+timeTaken=0;
     typedWords = [];
     document.getElementById("typed_text").value = ""; // Clear the input on reset
     document.getElementById("results").innerHTML = "";
@@ -118,6 +119,7 @@ const startTimer = () => {
         timer = setInterval(() => {
             if (timeRemaining > 0) {
                 timeRemaining--;
+		    timeTaken++;
                 updateDisplayTime();
             } else {
                 clearInterval(timer);
@@ -166,7 +168,7 @@ const showResults = () => {
        
 	   <center> <h1 style="color:red;">Result</h1><h2>${message}</h2></center>
       
-	  <table><tr>
+	  <table><td>Typing Speed</td><Td>:</td><td>${speed} WPM</td></tr><tr>
    <Td><div class="results-item"><span class="total-count">Total Typed Words</td><Td>:</td><td></span> ${totalTypedWords}</div></td>
 <tr><td>        <div class="results-item"><span class="correct-count">Correct Words</td><Td>:</td><td></span> ${correctWordsTyped} (${correctCharactersTyped} Keystrokes)</div></td>
 <tr> <td>       <div class="results-item" style="color:red";><span class="incorrect-count">Incorrect Words</td><Td>:</td><td></span> ${wrongWords} ( ${wrongCharactersTyped} Keystrokes)</div></td>
