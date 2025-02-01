@@ -148,7 +148,7 @@ const showResults = () => {
     } else if (totalTypedWords > 30 && accuracy >= 95) {
         message = "👍 Nice Effort! 👍 ";
     } else if (speed < 30 && accuracy >= 95) {
-        message = "🧐 Focus and Improve! Practice makes perfect! 💪";
+        message = "🧐 Focus and Improve! <b>Practice makes perfect! 💪";
     } else {
         message = "🚧 Every expert was once a beginner! 🌱";
     }
@@ -166,7 +166,8 @@ const showResults = () => {
        
 	   <center> <h1 style="color:red;">Result</h1><h2>${message}</h2></center>
       
-	  <table><tr><Td><div class="results-item"><span class="total-count">Total Typed Words</td><Td>:</td><td></span> ${totalTypedWords}</div></td>
+	  <table><tr><td>Typing Speed</td><Td>:</td><td>${speed} WPM;
+   <Td><div class="results-item"><span class="total-count">Total Typed Words</td><Td>:</td><td></span> ${totalTypedWords}</div></td>
 <tr><td>        <div class="results-item"><span class="correct-count">Correct Words</td><Td>:</td><td></span> ${correctWordsTyped} (${correctCharactersTyped} Keystrokes)</div></td>
 <tr> <td>       <div class="results-item" style="color:red";><span class="incorrect-count">Incorrect Words</td><Td>:</td><td></span> ${wrongWords} ( ${wrongCharactersTyped} Keystrokes)</div></td>
 <tr><td>        <div class="results-item"><span class="accuracy">Accuracy</td><Td>:</td><td></span> ${accuracy}%</div>
