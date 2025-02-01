@@ -141,13 +141,13 @@ const showResults = () => {
 
     let message = "";
 
-    if (totalTypedWords > 50 && accuracy >= 95) {
+    if (speed > 50 && accuracy >= 95) {
         message = "🌟 🧙‍♂️Typing Wizard! 🌟";
-    } else if (totalTypedWords > 40 && accuracy >= 95) {
+    } else if (speed > 40 && accuracy >= 95) {
         message = "🎉Great Job!🎉 ";
     } else if (totalTypedWords > 30 && accuracy >= 95) {
         message = "👍 Nice Effort! 👍 ";
-    } else if (totalTypedWords < 30 && accuracy >= 95) {
+    } else if (speed < 30 && accuracy >= 95) {
         message = "🧐 Focus and Improve! Practice makes perfect! 💪";
     } else {
         message = "🚧 Every expert was once a beginner! 🌱";
