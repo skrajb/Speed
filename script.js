@@ -137,7 +137,7 @@ document.getElementById("timer").addEventListener("change", function() {
 const showResults = () => {
     const totalTypedWords = correctWordsTyped + wrongWords;
     const accuracy = totalTypedWords > 0 ? ((correctWordsTyped / totalTypedWords) * 100).toFixed(2) : 0;
-    const speed = (totalTypedWords / (timeRemaining / 60)).toFixed(2); // Words per minute
+    const speed = (totalTypedWords / (timeTaken / 60)).toFixed(2); // Words per minute
 
     let message = "";
 
@@ -166,7 +166,7 @@ const showResults = () => {
        
 	   <center> <h1 style="color:red;">Result</h1><h2>${message}</h2></center>
       
-	  <table><tr>
+	  <table><tr><td>Typing Speed</td><Td>:</td><td>${speed} WPM</td></tr><tr>
    <Td><div class="results-item"><span class="total-count">Total Typed Words</td><Td>:</td><td></span> ${totalTypedWords}</div></td>
 <tr><td>        <div class="results-item"><span class="correct-count">Correct Words</td><Td>:</td><td></span> ${correctWordsTyped} (${correctCharactersTyped} Keystrokes)</div></td>
 <tr> <td>       <div class="results-item" style="color:red";><span class="incorrect-count">Incorrect Words</td><Td>:</td><td></span> ${wrongWords} ( ${wrongCharactersTyped} Keystrokes)</div></td>
