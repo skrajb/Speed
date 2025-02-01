@@ -142,15 +142,15 @@ const showResults = () => {
     let message = "";
 
     if (totalTypedWords > 50 && accuracy >= 95) {
-        message = "🌟 **Typing Wizard!** 🌟 <br> You might just become a typing legend! 🏆";
+        message = "🌟 🧙‍♂️Typing Wizard! 🌟";
     } else if (totalTypedWords > 40 && accuracy >= 95) {
-        message = "🎉 **Great Job!** 🎉 <br> Keep pushing your limits! 🚀";
+        message = "🎉Great Job!🎉 ";
     } else if (totalTypedWords > 30 && accuracy >= 95) {
-        message = "👍 **Nice Effort!** 👍 <br> You’re on the right track!  ⏳";
+        message = "👍 Nice Effort! 👍 ";
     } else if (totalTypedWords < 30 && accuracy >= 95) {
-        message = "🧐 **Focus and Improve!** <br> Practice makes perfect! 💪";
+        message = "🧐 Focus and Improve! Practice makes perfect! 💪";
     } else {
-        message = "🚧 **Keep Trying!** 🚧  <br> Every expert was once a beginner! 🌱";
+        message = "🚧 Every expert was once a beginner! 🌱";
     }
 
     // Set the testCompleted flag to true
